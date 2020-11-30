@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: This template creates an EC2 instance which enables SSH connection.  # This is a Comment line
+
+Resources: 
+  FeyzCFInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-096c1922a7e55b3b0
+      InstanceType: t2.micro
+      KeyName: 20200824
+      SecurityGroups: 
+        - NewSecurityGroup
+      Tags: 
+        - Key: Name
+          Value: flovearth-cf-instance
+          
